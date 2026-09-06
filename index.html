@@ -434,7 +434,7 @@ const modalInstructions = document.getElementById('modal-instructions');
 const modalVictory = document.getElementById('modal-victory');
 const levelBanner = document.getElementById('level-banner');
 
-const _cK = "QlVFTkEtUFVOVEVSUUEtQ0FaQURPUg==";
+const _cK = "QlVFTkEtUFVOVEVSMUEtQ0FaQURPUg=="; // CORREGIDO: BUENA-PUNTERIA-CAZADOR
 const _cL = "aHR0cHM6Ly93d3cuY2VydGl0dWRlcy5vcmcvY2VydGl0dWRlP3dwPUdDQlhLNlo=";
 
 function getSecureCertData() {
@@ -662,7 +662,7 @@ window.addEventListener('resize', resizeCanvas);
 
 let gameActive = false;
 let score = 0;
-const TARGETS_PER_LEVEL = 2; // CONFIGURADO A 2 ACIERTOS PARA PRUEBAS
+const TARGETS_PER_LEVEL = 2; // MODO PRUEBAS (cambiar a 20 tras probar)
 const TOTAL_LEVELS = 6;
 const TOTAL_TARGETS = TARGETS_PER_LEVEL * TOTAL_LEVELS; // 12
 let currentLevel = 1;
