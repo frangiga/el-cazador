@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- SI ESTÁS VIENDO ESTO PARA SOLUCIONAR EL MULTI, ERES UN MISERABLE QUE NO MERECE ESTE CACHÉ -->
+
+  
+<!-- SI ESTÁS VIENDO ESTO PARA SOLUCIONAR EL MYSTERY, ERES UN MISERABLE QUE NO MERECE ESTE CACHÉ -->
+
+<!-- BUENO... TAMBIÉN UN GRAN HIJO O HIJA DE LA GRAN PUTA (QUE NO SE TE OLVIDE) -->
+
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>EL CAZADOR</title>
@@ -303,7 +309,6 @@ footer a:hover { color: var(--orange-bright); }
   pointer-events: none;
   border-radius: 8px;
 }
-
 .level-banner {
   position: absolute;
   top: 50%;
@@ -344,7 +349,7 @@ footer a:hover { color: var(--orange-bright); }
   </header>
   <div class="status-bar">
     <span><span id="lbl-level">NIVEL</span>: <strong id="level-display" style="color:var(--text-yellow);">1/6</strong></span>
-    <span><span id="lbl-score">BLANCOS</span>: <strong id="score-display" style="color:var(--orange-bright);">0/12</strong></span>
+    <span><span id="lbl-score">BLANCOS</span>: <strong id="score-display" style="color:var(--orange-bright);">0/120</strong></span>
   </div>
   <div class="radar-container" id="radar-box">
     <canvas id="radarCanvas"></canvas>
@@ -396,7 +401,7 @@ footer a:hover { color: var(--orange-bright); }
         <p id="txt-prep-desc">Demuestra tu puntería como cazador interceptando los platos en movimiento:</p>
         <ul>
           <li id="txt-step-1">Toca/pulsa sobre cada <strong>plato</strong> en cuanto aparezca en la retícula.</li>
-          <li id="txt-step-2">Supera los <strong>6 niveles</strong> de dificultad (2 platos por nivel, 12 en total).</li>
+          <li id="txt-step-2">Supera los <strong>6 niveles</strong> de dificultad (20 platos por nivel, 120 en total).</li>
           <li id="txt-step-3">Al completar la instrucción, obtendrás la clave para <strong>Certitude</strong>.</li>
         </ul>
         <span class="warning-note" id="txt-warning-note">⚠️ ¡ATENCIÓN! Si fallas el disparo o el plato se escapa, el contador del nivel actual se reinicia a cero.</span>
@@ -434,7 +439,7 @@ const modalInstructions = document.getElementById('modal-instructions');
 const modalVictory = document.getElementById('modal-victory');
 const levelBanner = document.getElementById('level-banner');
 
-const _cK = "QlVFTkEtUFVOVEVSMUEtQ0FaQURPUg=="; // CORREGIDO: BUENA-PUNTERIA-CAZADOR
+const _cK = "QlVFTkEtUFVOVEVSMUEtQ0FaQURPUg=="; // BUENA-PUNTERIA-CAZADOR
 const _cL = "aHR0cHM6Ly93d3cuY2VydGl0dWRlcy5vcmcvY2VydGl0dWRlP3dwPUdDQlhLNlo=";
 
 function getSecureCertData() {
@@ -453,7 +458,7 @@ const translations = {
     prepTitle: "📋 INSTRUCCIONES DE MISIÓN",
     prepDesc: "Demuestra tu puntería como cazador interceptando los platos en movimiento:",
     step1: "Toca/pulsa sobre cada <strong>plato</strong> en cuanto aparezca en la retícula.",
-    step2: "Supera los <strong>6 niveles</strong> de dificultad (2 platos por nivel, 12 en total).",
+    step2: "Supera los <strong>6 niveles</strong> de dificultad (20 platos por nivel, 120 en total).",
     step3: "Al completar la instrucción, obtendrás la clave para <strong>Certitude</strong>.",
     warnNote: "⚠️ ¡ATENCIÓN! Si fallas el disparo o el plato se escapa, el contador del nivel actual se reinicia a cero.",
     startBtn: "INICIAR CACERÍA",
@@ -476,7 +481,7 @@ const translations = {
     prepTitle: "📋 MISSION INSTRUCTIONS",
     prepDesc: "Show your accuracy as a hunter by hitting moving clay targets:",
     step1: "Tap/click each <strong>target</strong> as soon as it appears in the reticle.",
-    step2: "Complete all <strong>6 levels</strong> (2 shots per level, 12 total).",
+    step2: "Complete all <strong>6 levels</strong> (20 shots per level, 120 total).",
     step3: "Upon complete clearance, the <strong>Certitude</strong> keyword will be revealed.",
     warnNote: "⚠️ WARNING! If you miss or a target escapes, current level counter resets to zero.",
     startBtn: "START HUNTING",
@@ -499,7 +504,7 @@ const translations = {
     prepTitle: "📋 MISSIONSINSTRUKTIONEN",
     prepDesc: "Beweisen Sie Ihre Treffsicherheit als Jäger beim Tontaubenschießen:",
     step1: "Tippen Sie auf jede <strong>Tontaube</strong>, sobald sie im Fadenkreuz erscheint.",
-    step2: "Meistern Sie <strong>6 Level</strong> (2 Treffer pro Level, 12 insgesamt).",
+    step2: "Meistern Sie <strong>6 Level</strong> (20 Treffer pro Level, 120 insgesamt).",
     step3: "Nach Abschluss wird das Passwort für <strong>Certitude</strong> freigeschaltet.",
     warnNote: "⚠️ ACHTUNG! Bei einem Fehlschuss wird der Zähler dieses Levels zurückgesetzt.",
     startBtn: "JAGD STARTEN",
@@ -522,7 +527,7 @@ const translations = {
     prepTitle: "📋 INSTRUCTIONS DE MISSION",
     prepDesc: "Prouvez votre précision de chasseur en touchant les pigeons d'argile en mouvement :",
     step1: "Appuyez sur chaque <strong>cible</strong> dès qu'elle apparaît dans le viseur.",
-    step2: "Franchissez les <strong>6 niveaux</strong> (2 tirs par niveau, 12 au total).",
+    step2: "Franchissez les <strong>6 niveaux</strong> (20 tirs par niveau, 120 au total).",
     step3: "Une fois terminé, le mot de passe <strong>Certitude</strong> sera révélé.",
     warnNote: "⚠️ ATTENTION ! En cas de tir raté, le compteur du niveau est réinitialisé.",
     startBtn: "COMMENCER LA CHASSE",
@@ -545,7 +550,7 @@ const translations = {
     prepTitle: "📋 MISSIE-INSTRUCTIES",
     prepDesc: "Toon je precisie als jager door bewegende kleiduiven te raken:",
     step1: "Tik op elke <strong>kleiduif</strong> zodra deze in het puinzoeker verschijnt.",
-    step2: "Voltooi alle <strong>6 niveaus</strong> (2 schoten per niveau, 12 in totaal).",
+    step2: "Voltooi alle <strong>6 niveaus</strong> (20 schoten per niveau, 120 in totaal).",
     step3: "Na voltooiing wordt de sleutel voor <strong>Certitude</strong> ontgrendeld.",
     warnNote: "⚠️ OPGELET! Bij een misklik wordt de teller van dat niveau gereset.",
     startBtn: "START JACHT",
@@ -568,7 +573,7 @@ const translations = {
     prepTitle: "📋 INSTRUÇÕES DA MISSÃO",
     prepDesc: "Demonstre a sua pontaria de caçador acertando nos pratos em movimento:",
     step1: "Toque em cada <strong>prato</strong> assim que aparecer na retícula.",
-    step2: "Supera os <strong>6 níveis</strong> (2 tiros por nível, 12 no total).",
+    step2: "Supera os <strong>6 níveis</strong> (20 tiros por nível, 120 no total).",
     step3: "Ao completar, a palavra-chave para o <strong>Certitude</strong> será revelada.",
     warnNote: "⚠️ ATENÇÃO! Se falhar o tiro, o contador desse nível reinicia a zero.",
     startBtn: "INICIAR CAÇADA",
@@ -662,9 +667,9 @@ window.addEventListener('resize', resizeCanvas);
 
 let gameActive = false;
 let score = 0;
-const TARGETS_PER_LEVEL = 2; // MODO PRUEBAS (cambiar a 20 tras probar)
+const TARGETS_PER_LEVEL = 20; // CONFIGURACIÓN FINAL: 20 por nivel
 const TOTAL_LEVELS = 6;
-const TOTAL_TARGETS = TARGETS_PER_LEVEL * TOTAL_LEVELS; // 12
+const TOTAL_TARGETS = TARGETS_PER_LEVEL * TOTAL_LEVELS; // 120 objetivos
 let currentLevel = 1;
 let sweepAngle = 0;
 let sweepSpeed = 0.040;
@@ -874,7 +879,7 @@ function handleTap(e) {
     if (targetTimeoutId) clearTimeout(targetTimeoutId);
     score++;
     scoreEl.textContent = `${score}/${TOTAL_TARGETS}`;
-    playBeep(700 + (score * 8), 'sine', 0.1);
+    playBeep(700 + ((score % TARGETS_PER_LEVEL) * 8), 'sine', 0.1);
     targets = [];
 
     const calculatedLevel = Math.min(Math.floor(score / TARGETS_PER_LEVEL) + 1, TOTAL_LEVELS);
